@@ -22,9 +22,9 @@ function LandingPage() {
           transition="fontSize 0.3s ease-in-out"
           _hover={{ fontSize: "5xl" }}
           userSelect="none"
-          onClick={() => navigate("/Milseis")}
+          onClick={() => navigate("/Milseis82")}
         >
-          MilSeis
+          MilSeis82
         </Heading>
       </Center>
     </Flex>
