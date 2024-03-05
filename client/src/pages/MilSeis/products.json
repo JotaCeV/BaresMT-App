@@ -1,0 +1,75 @@
+{
+  "products": [
+    {
+      "name": "Cafe Pocillo",
+      "type": "Cafe",
+      "price": 950
+    },
+    {
+      "name": "Cafe Jarrito",
+      "type": "Cafe",
+      "price": 1290
+    },
+    {
+      "name": "Cafe con Leche",
+      "type": "Cafe",
+      "price": 1450
+    },
+    {
+      "name": "Cafe Doble",
+      "type": "Cafe",
+      "price": 1350
+    },
+    {
+      "name": "Cafe Tiente (Cappuccino)",
+      "type": "Cafe",
+      "price": 2100
+    },
+    {
+      "name": "Tazon XXL",
+      "type": "Cafe",
+      "price": 1990
+    },
+    {
+      "name": "Té / Té Frio",
+      "type": "Infusiones",
+      "detail": "Negro Ceylán - Frutos Rojos - Orgánico",
+      "price": 1290
+    },
+    {
+      "name": "Blend Té - Chai",
+      "type": "Infusiones",
+      "detail": "Té negro, jengibre, canela, pimienta, clavo de olor y anis",
+      "price": 1800
+    },
+    {
+      "name": "Blend Té - Love",
+      "type": "Infusiones",
+      "detail": "Hibiscus, arándanos, pasas de uva y cáscaras de naranja",
+      "price": 1800
+    },
+    {
+      "name": "Blend Té - Paris",
+      "type": "Infusiones",
+      "detail": "Té negro, cascarillas y chips de chocolate",
+      "price": 1800
+    },
+    {
+      "name": "Blend Té - Praga",
+      "type": "Infusiones",
+      "detail": "Té verde, té rojo, estrellas de anis, naranja, lemons grass y vainilla",
+      "price": 1800
+    },
+    {
+      "name": "Blend Té - Maya",
+      "type": "Infusiones",
+      "detail": "Té negro, Hibiscus, menta, cardamomo y vainilla",
+      "price": 1800
+    },
+    {
+      "name": "Chai Latte",
+      "type": "Infusiones",
+      "price": 1690
+    }
+  ]
+}

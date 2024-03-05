@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./components/Landing-Page/LandingPage";
-import TientePage from "./pages/TientePage";
-import MilSeisPage from "./pages/MilSeisPage";
+import TientePage from "./pages/Tiente/TientePage";
+import MilSeisPage from "./pages/MilSeis/MilSeisPage";
 
 function App() {
   return (

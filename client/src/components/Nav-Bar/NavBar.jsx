@@ -8,7 +8,7 @@ import {
 } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
-function NavBar({ theme }) {
+function NavBar({ theme, barQuery }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -41,6 +41,7 @@ function NavBar({ theme }) {
         h="210px"
         transition="opacity 0.3s ease-in, width 0.3s ease-in"
         opacity={isOpen ? 1 : 0}
+        onClick={() => navigate(`/${barQuery}`)}
       >
         <Heading>Imagen</Heading>
       </Center>
@@ -54,9 +55,11 @@ function NavBar({ theme }) {
           }}
           color={theme.color}
           leftIcon={<PiBookOpenText />}
+          onClick={() => navigate(`/${barQuery}?view=Catalogo`)}
         >
           {isOpen ? "Catalogo" : ""}
         </Button>
+
         <Button
           w="90%"
           fontSize="25px"
@@ -66,6 +69,7 @@ function NavBar({ theme }) {
           }}
           color={theme.color}
           leftIcon={<PiClipboardText fontSize="30px" />}
+          onClick={() => navigate(`/${barQuery}?view=Pedidos`)}
         >
           {isOpen ? "Lista de Pedidos" : ""}
         </Button>
