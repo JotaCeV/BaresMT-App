@@ -70,6 +70,178 @@
       "name": "Chai Latte",
       "type": "Infusiones",
       "price": 1690
-    }
+    },
+    {
+      "name": "Agua Mineral",
+      "type": "Bebidas",
+      "price": 900
+    },
+    {
+      "name": "Agua Saborizada (500 ml)",
+      "type": "Bebidas",
+      "price": 1050
+    },
+    {
+      "name": "Agua Saborizada (1,5 lt)",
+      "type": "Bebidas",
+      "price": 2200
+    },
+    {
+      "name": "Gaseosa (500 ml)",
+      "type": "Bebidas",
+      "price": 1150
+    },
+    {
+      "name": "Gaseosa (1,5 lt)",
+      "type": "Bebidas",
+      "price": 2900
+    },
+    {
+      "name": "Gatorade (500 ml)",
+      "type": "Bebidas",
+      "price": 1290
+    },
+    {
+      "name": "Submarino",
+      "type": "Batidos",
+      "price": 1990
+    },
+    {
+      "name": "Chocolatada",
+      "type": "Batidos",
+      "price": 1350
+    },
+    {
+      "name": "Limonada / Naranjada",
+      "type": "Batidos",
+      "price": 1450
+    },
+    {
+      "name": "Botella de Limonada / Naranjada",
+      "type": "Batidos",
+      "price": 3600
+    },
+    {
+      "name": "Licuado",
+      "type": "Batidos",
+      "detail": "Banana / Frutos Rojos / Durazno / Multifruta"
+      "price": 2200
+    },
+    {
+      "name": "Batido (c/ granola y avena)",
+      "type": "Batidos",
+      "price": 2750
+    },
+    {
+      "name": "Exprimido de naranja",
+      "type": "Batidos",
+      "price": 1980
+    },
+    {
+      "name": "Iced Latte",
+      "type": "Batidos",
+      "price": 1800
+    },
+    {
+      "name": "Milkshake",
+      "type": "Batidos",
+      "detail": "Chocolate / Dulche de Leche / Frutilla / Vainilla / Oreo",
+      "price": 2450
+    },
+    {
+      "name": "Frappuccino",
+      "type": "Batidos",
+      "detail": "Chocolate / Dulce de leche / Vainilla",
+      "price": 2650
+    },
+    {
+      "name": "Crumble de Manzana",
+      "type": "Pasteleria",
+      "price": 3360
+    },
+    {
+      "name": "Torta Brownie",
+      "type": "Pasteleria",
+      "price": 3360
+    },
+    {
+      "name": "Cheesecake",
+      "type": "Pasteleria",
+      "detail": "Frutos Rojos / Maracuya / Pistacho",
+      "price": 3360
+    },
+    {
+      "name": "Copa oreo",
+      "type": "Pasteleria",
+      "price": 3360
+    },
+    {
+      "name": "Chocotorta",
+      "type": "Pasteleria",
+      "price": 3150
+    },
+    {
+      "name": "Lemon Pie",
+      "type": "Pasteleria",
+      "price": 3360
+    },
+    {
+      "name": "Pasta Frola de Membrillo",
+      "type": "Pasteleria",
+      "price": 1350
+    },
+    {
+      "name": "Carrot Cake",
+      "type": "Pasteleria",
+      "price": 3360
+    },
+    {
+      "name": "Torta Matilda",
+      "type": "Pasteleria",
+      "price": 3650
+    },
+    {
+      "name": "Porcion de Budin",
+      "type": "Pasteleria",
+      "price": 1400
+    },
+    {
+      "name": "Roll de manzana y canela",
+      "type": "Pasteleria",
+      "price": 2200
+    },
+    {
+      "name": "Alfajor de Chocolate",
+      "type": "Pasteleria",
+      "price": 1650
+    },
+    {
+      "name": "Alfajor de Pistacho",
+      "type": "Pasteleria",
+      "price": 2220
+    },
+    {
+      "name": "Alfajor de Maicena",
+      "type": "Pasteleria",
+      "price": 1380,
+    },
+    {
+      "name": "Cookies",
+      "type": "Pasteleria",
+      "detail": "c/ chips de chocolate o pasas de uva"
+      "price": 840
+    },
+    {
+      "name": "Tostado (Ciabatta o Arabe)",
+      "type": "Tostados",
+      "detail": "Jamon y queso / Queso y tomate",
+      "price": 3250
+    },
+    {
+      "name": "Caprese",
+      "type": "Tostados",
+      "detail": "Queso, tomate, aceitunas y albahaca",
+      "price": 3960
+    },
   ]
 }
