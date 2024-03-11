@@ -124,7 +124,7 @@
     {
       "name": "Licuado",
       "type": "Batidos",
-      "detail": "Banana / Frutos Rojos / Durazno / Multifruta"
+      "detail": "Banana / Frutos Rojos / Durazno / Multifruta",
       "price": 2200
     },
     {
@@ -223,12 +223,12 @@
     {
       "name": "Alfajor de Maicena",
       "type": "Pasteleria",
-      "price": 1380,
+      "price": 1380
     },
     {
       "name": "Cookies",
       "type": "Pasteleria",
-      "detail": "c/ chips de chocolate o pasas de uva"
+      "detail": "c/ chips de chocolate o pasas de uva",
       "price": 840
     },
     {
@@ -242,6 +242,6 @@
       "type": "Tostados",
       "detail": "Queso, tomate, aceitunas y albahaca",
       "price": 3960
-    },
+    }
   ]
 }
