@@ -61,7 +61,7 @@ function ProductsPage({ theme, products }) {
               <Tr key={name}>
                 <Td>{name}</Td>
                 <Td>{type}</Td>
-                <Td>{detail ? detail : "Ninguno"}</Td>
+                <Td>{detail ? detail : "N/H"}</Td>
                 <Td isNumeric>${price}</Td>
               </Tr>
             ))}
