@@ -4,6 +4,7 @@ import NavBar from "../../components/Nav-Bar/NavBar";
 import { useSearchParams } from "react-router-dom";
 import ProductsPage from "../../components/Products-Page/ProductsPage";
 import productsJSON from "./products.json";
+import OrderList from "../../components/Order-list/OrderList";
 
 function TientePage() {
   const [pageView, setPageView] = useState("");
@@ -27,6 +28,9 @@ function TientePage() {
         return (
           <ProductsPage theme={TienteTheme} products={productsJSON.products} />
         );
+
+      case "Pedidos":
+        return <OrderList products={productsJSON.products} />;
 
       default:
         return <Heading>Tiente Bar</Heading>;

@@ -4,6 +4,7 @@ import NavBar from "../../components/Nav-Bar/NavBar";
 import { useSearchParams } from "react-router-dom";
 import ProductsPage from "../../components/Products-Page/ProductsPage";
 import productsJSON from "./products.json";
+import OrderList from "../../components/Order-list/OrderList";
 
 function MilSeisPage() {
   const [pageView, setPageView] = useState("");
@@ -26,6 +27,9 @@ function MilSeisPage() {
         return (
           <ProductsPage theme={MilseisTheme} products={productsJSON.products} />
         );
+
+      case "Pedidos":
+        return <OrderList products={productsJSON.products} />;
 
       default:
         return <Heading>Milseis82 Bar</Heading>;
