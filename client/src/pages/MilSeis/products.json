@@ -226,6 +226,11 @@
       "price": 1380
     },
     {
+      "name": "Alfajor con Sal Marina",
+      "type": "Pasteleria",
+      "price": 1600
+    },
+    {
       "name": "Cookies",
       "type": "Pasteleria",
       "detail": "c/ chips de chocolate o pasas de uva",
@@ -242,6 +247,28 @@
       "type": "Tostados",
       "detail": "Queso, tomate, aceitunas y albahaca",
       "price": 3960
-    }
+    },
+    {
+      "name": "Alfajor",
+      "type": "Sin TACC",
+      "price": 2220
+    },
+    {
+      "name": "Masitas Secas",
+      "type": "Sin TACC",
+      "detail": "6 unidades",
+      "price": 1920
+    },
+    {
+      "name": "Tostado Arabe",
+      "type": "Sin TACC",
+      "detail": "Jamon y Queso / Queso y Tomate",
+      "price": 2900
+    },
+    {
+      "name": "Hotcakes",
+      "type": "Sin TACC",
+      "price": 3360
+    },
   ]
 }
