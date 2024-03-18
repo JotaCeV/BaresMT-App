@@ -14,13 +14,14 @@ import {
   ModalOverlay,
   Stack,
   Table,
+  TableCaption,
   TableContainer,
   Tbody,
   Td,
   Tr,
   useDisclosure,
 } from "@chakra-ui/react";
-import { PiPlusBold } from "react-icons/pi";
+import { PiPlusBold, PiMinusBold } from "react-icons/pi";
 import React, { useState } from "react";
 
 function OrderList({ products }) {
@@ -42,6 +43,21 @@ function OrderList({ products }) {
   const handleAddProduct = (productName, productPrice) => {
     const newProduct = { name: productName, price: productPrice };
     setOrderProducts([...orderProducts, newProduct]);
+  };
+
+  const handleDeleteProduct = (prodIndex) => {
+    const filteredProducts = orderProducts.filter(
+      (e, index) => index !== prodIndex
+    );
+
+    setOrderProducts(filteredProducts);
+  };
+
+  const calculateTotal = () => {
+    let total = 0;
+    orderProducts.forEach((e) => (total += e.price));
+
+    return total;
   };
 
   return (
@@ -82,7 +98,7 @@ function OrderList({ products }) {
                 w="100%"
               />
               {orderSearch ? (
-                <TableContainer>
+                <TableContainer overflowY="auto" h="65vh">
                   <Table>
                     <Tbody>
                       {orderSearch?.map(({ name, type, price }) => (
@@ -110,18 +126,31 @@ function OrderList({ products }) {
             <Divider orientation="vertical" />
 
             <Box w="35%">
-              <TableContainer h="70vh">
+              <TableContainer h="55vh" overflowY="auto">
                 <Table variant="striped">
                   <Tbody>
-                    {orderProducts.map(({ name, price }) => (
-                      <Tr key={name}>
+                    {orderProducts?.map(({ name, price }, index) => (
+                      <Tr key={index}>
                         <Td>{name}</Td>
                         <Td>{price}</Td>
+                        <Td>
+                          <IconButton
+                            icon={<PiMinusBold />}
+                            colorScheme="red"
+                            onClick={() => handleDeleteProduct(index)}
+                          />
+                        </Td>
                       </Tr>
                     ))}
                   </Tbody>
                 </Table>
               </TableContainer>
+              <Box h="5vh" textAlign="center">
+                <Heading m="0.5rem">{`Total = $ ${calculateTotal()}`}</Heading>
+                <Button m="0.5rem" colorScheme="green" variant="outline">
+                  Finalizar Pedido
+                </Button>
+              </Box>
             </Box>
           </ModalBody>
         </ModalContent>
