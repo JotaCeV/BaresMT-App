@@ -14,17 +14,16 @@ import {
   ModalOverlay,
   Stack,
   Table,
-  TableCaption,
   TableContainer,
   Tbody,
   Td,
   Tr,
   useDisclosure,
 } from "@chakra-ui/react";
-import { PiPlusBold, PiMinusBold } from "react-icons/pi";
+import { PiPlusBold, PiMinusBold, PiTrashBold } from "react-icons/pi";
 import React, { useState } from "react";
 
-function OrderList({ products }) {
+function OrderList({ products, theme }) {
   const [creatingOrder, setCreatingOrder] = useState(false);
   const [orderProducts, setOrderProducts] = useState([]);
   const [orderSearch, setOrderSearch] = useState([]);
@@ -62,15 +61,26 @@ function OrderList({ products }) {
 
   return (
     <Flex w="100%" flexDirection="column" alignContent="center" p="1.5rem 2rem">
-      <Heading textAlign="center" m="1.5rem" as="h1" size="2xl">
+      <Heading
+        textAlign="center"
+        m="1.5rem"
+        as="h1"
+        size="2xl"
+        textTransform="uppercase"
+      >
         Lista de pedidos
       </Heading>
 
       <Stack direction="row" justify="center" w="100%" gap="1rem">
-        <Button colorScheme="green" size="lg" onClick={onOpen}>
+        <Button
+          colorScheme="green"
+          size="lg"
+          onClick={onOpen}
+          variant="outline"
+        >
           Agregar pedido
         </Button>
-        <Button colorScheme="red" size="lg">
+        <Button colorScheme="red" size="lg" variant="outline">
           Eliminar pedido
         </Button>
       </Stack>
@@ -83,7 +93,13 @@ function OrderList({ products }) {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader textAlign="center" fontSize="30px">
+          <ModalHeader
+            textAlign="center"
+            fontSize="30px"
+            bg={theme.bg}
+            borderRadius="0.3rem 0.3rem 0 0"
+            color={theme.color}
+          >
             Crear Orden
           </ModalHeader>
           <ModalCloseButton />
@@ -91,11 +107,12 @@ function OrderList({ products }) {
           <Divider colorScheme="blackAlpha" />
 
           <ModalBody display="flex" gap="1rem">
-            <Box w="60%">
+            <Box w="55%">
               <Input
                 placeholder="Buscar producto..."
                 onChange={(e) => handleSearchedProducts(e.target.value)}
                 w="100%"
+                focusBorderColor={theme.bg}
               />
               {orderSearch ? (
                 <TableContainer overflowY="auto" h="65vh">
@@ -110,6 +127,7 @@ function OrderList({ products }) {
                             <IconButton
                               icon={<PiPlusBold />}
                               colorScheme="green"
+                              variant="outline"
                               onClick={() => handleAddProduct(name, price)}
                             />
                           </Td>
@@ -125,7 +143,7 @@ function OrderList({ products }) {
 
             <Divider orientation="vertical" />
 
-            <Box w="35%">
+            <Box w="45%">
               <TableContainer h="55vh" overflowY="auto">
                 <Table variant="striped">
                   <Tbody>
@@ -135,7 +153,7 @@ function OrderList({ products }) {
                         <Td>{price}</Td>
                         <Td>
                           <IconButton
-                            icon={<PiMinusBold />}
+                            icon={<PiTrashBold />}
                             colorScheme="red"
                             onClick={() => handleDeleteProduct(index)}
                           />
@@ -145,7 +163,7 @@ function OrderList({ products }) {
                   </Tbody>
                 </Table>
               </TableContainer>
-              <Box h="5vh" textAlign="center">
+              <Box textAlign="center">
                 <Heading m="0.5rem">{`Total = $ ${calculateTotal()}`}</Heading>
                 <Button m="0.5rem" colorScheme="green" variant="outline">
                   Finalizar Pedido
