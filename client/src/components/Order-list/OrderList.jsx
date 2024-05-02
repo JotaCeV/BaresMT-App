@@ -3,6 +3,8 @@ import {
   Button,
   Divider,
   Flex,
+  Grid,
+  GridItem,
   Heading,
   IconButton,
   Input,
@@ -23,7 +25,7 @@ import {
 import { PiPlusBold, PiMinusBold, PiTrashBold } from "react-icons/pi";
 import React, { useState } from "react";
 
-function OrderList({ products, theme }) {
+function OrderList({ products, theme, barOrders, barOrdersFunc }) {
   const [creatingOrder, setCreatingOrder] = useState(false);
   const [orderProducts, setOrderProducts] = useState([]);
   const [orderSearch, setOrderSearch] = useState([]);
@@ -59,6 +61,13 @@ function OrderList({ products, theme }) {
     return total;
   };
 
+  const finishOrder = () => {
+    const newOrder = { products: orderProducts, total: calculateTotal() };
+    barOrdersFunc([...barOrders, newOrder]);
+    onClose();
+    setOrderProducts([]);
+  };
+
   return (
     <Flex w="100%" flexDirection="column" alignContent="center" p="1.5rem 2rem">
       <Heading
@@ -84,6 +93,14 @@ function OrderList({ products, theme }) {
           Eliminar pedido
         </Button>
       </Stack>
+
+      <Grid templateColumns="repeat(5, 1fr)" gap={3} m="1rem 0">
+        {barOrders?.map((e) => (
+          <GridItem bg="red" h="40vh">
+            {e.total}
+          </GridItem>
+        ))}
+      </Grid>
 
       <Modal
         isOpen={isOpen}
@@ -165,7 +182,12 @@ function OrderList({ products, theme }) {
               </TableContainer>
               <Box textAlign="center">
                 <Heading m="0.5rem">{`Total = $ ${calculateTotal()}`}</Heading>
-                <Button m="0.5rem" colorScheme="green" variant="outline">
+                <Button
+                  m="0.5rem"
+                  colorScheme="green"
+                  variant="outline"
+                  onClick={() => finishOrder()}
+                >
                   Finalizar Pedido
                 </Button>
               </Box>

@@ -22,6 +22,8 @@ function NavBar({ theme, barQuery }) {
       p="5px 0px"
       transition="all 0.5s ease-in-out"
       gap={4}
+      position="sticky"
+      top="0"
     >
       <Button
         onClick={() => setIsOpen(!isOpen)}

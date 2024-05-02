@@ -14,12 +14,13 @@ import productsJSON from "./products.json";
 import OrderList from "../../components/Order-list/OrderList";
 
 function TientePage() {
-  const [pageView, setPageView] = useState("");
   const TienteTheme = {
     bg: "#7bd0c9",
     bg_dark: "#62a6a1",
     color: "#fff",
   };
+  const [pageView, setPageView] = useState("");
+  const [tienteOrders, setTienteOrders] = useState([]);
 
   const [params] = useSearchParams();
 
@@ -38,7 +39,12 @@ function TientePage() {
 
       case "Pedidos":
         return (
-          <OrderList products={productsJSON.products} theme={TienteTheme} />
+          <OrderList
+            products={productsJSON.products}
+            theme={TienteTheme}
+            barOrders={tienteOrders}
+            barOrdersFunc={setTienteOrders}
+          />
         );
 
       default:

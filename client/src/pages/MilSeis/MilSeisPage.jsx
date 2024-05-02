@@ -22,6 +22,8 @@ function MilSeisPage() {
   };
 
   const [pageView, setPageView] = useState("");
+  const [milseisOrders, setMilseisOrders] = useState([]);
+
   const [params] = useSearchParams();
 
   const view = params.get("view");
@@ -39,7 +41,12 @@ function MilSeisPage() {
 
       case "Pedidos":
         return (
-          <OrderList products={productsJSON.products} theme={MilseisTheme} />
+          <OrderList
+            products={productsJSON.products}
+            theme={MilseisTheme}
+            barOrders={milseisOrders}
+            barOrdersFunc={setMilseisOrders}
+          />
         );
 
       default:
