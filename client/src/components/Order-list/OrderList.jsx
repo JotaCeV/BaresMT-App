@@ -24,6 +24,7 @@ import {
 } from "@chakra-ui/react";
 import { PiPlusBold, PiMinusBold, PiTrashBold } from "react-icons/pi";
 import React, { useState } from "react";
+import OrderCards from "./Order-Cards/OrderCards";
 
 function OrderList({ products, theme, barOrders, barOrdersFunc }) {
   const [creatingOrder, setCreatingOrder] = useState(false);
@@ -96,9 +97,7 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
 
       <Grid templateColumns="repeat(5, 1fr)" gap={3} m="1rem 0">
         {barOrders?.map((e) => (
-          <GridItem bg="red" h="40vh">
-            {e.total}
-          </GridItem>
+          <OrderCards order={e} />
         ))}
       </Grid>
 
