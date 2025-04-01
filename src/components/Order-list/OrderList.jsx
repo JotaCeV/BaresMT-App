@@ -27,10 +27,12 @@ import React, { useState } from "react";
 import OrderCards from "./Order-Cards/OrderCards";
 
 function OrderList({ products, theme, barOrders, barOrdersFunc }) {
-  const [creatingOrder, setCreatingOrder] = useState(false);
+  const [deletingOrders, setDeletingOrders] = useState(false);
   const [orderProducts, setOrderProducts] = useState([]);
   const [orderSearch, setOrderSearch] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  // MODAL FUNCTIONS
 
   const handleSearchedProducts = (value) => {
     if (value === "") {
@@ -69,6 +71,13 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
     setOrderProducts([]);
   };
 
+  // CARD FUNCTIONS
+
+  const handleDeleteOrder = (orderIndex) => {
+    const deletedOrder = barOrders.filter((_, i) => i !== orderIndex);
+    barOrdersFunc(deletedOrder);
+  };
+
   return (
     <Flex w="100%" flexDirection="column" alignContent="center" p="1.5rem 2rem">
       <Heading
@@ -90,14 +99,24 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
         >
           Agregar pedido
         </Button>
-        <Button colorScheme="red" size="lg" variant="outline">
+        <Button
+          colorScheme="red"
+          size="lg"
+          variant="outline"
+          onClick={() => setDeletingOrders(!deletingOrders)}
+        >
           Eliminar pedido
         </Button>
       </Stack>
 
       <Grid templateColumns="repeat(5, 1fr)" gap={3} m="1rem 0">
-        {barOrders?.map((e) => (
-          <OrderCards order={e} />
+        {barOrders?.map((e, i) => (
+          <OrderCards
+            key={i}
+            order={e}
+            buttonFunc={() => handleDeleteOrder(i)}
+            deletingState={!deletingOrders}
+          />
         ))}
       </Grid>
 
