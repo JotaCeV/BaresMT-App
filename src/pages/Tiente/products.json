@@ -3,83 +3,83 @@
     {
       "name": "Cafe Pocillo",
       "type": "Cafe",
-      "price": 1200
+      "price": 2600
     },
     {
       "name": "Cafe Jarrito",
       "type": "Cafe",
-      "price": 1500
+      "price": 3000
     },
     {
       "name": "Cafe con Leche",
       "type": "Cafe",
-      "price": 1750
+      "price": 4500
     },
     {
       "name": "Cafe Doble",
       "type": "Cafe",
-      "price": 1550
+      "price": 3600
     },
     {
       "name": "Cafe Tiente (Cappuccino)",
       "type": "Cafe",
-      "price": 2450
+      "price": 6400
     },
     {
       "name": "Tazon XXL",
       "type": "Cafe",
-      "price": 2150
+      "price": 5500
     },
     {
       "name": "Té / Té Frio",
       "type": "Infusiones",
       "detail": "Negro Ceylán - Frutos Rojos - Orgánico",
-      "price": 1550
+      "price": 3100
     },
     {
       "name": "Blend Té - Chai",
       "type": "Infusiones",
       "detail": "Té negro, jengibre, canela, pimienta, clavo de olor y anis",
-      "price": 2100
+      "price": 4300
     },
     {
       "name": "Blend Té - Love",
       "type": "Infusiones",
       "detail": "Hibiscus, arándanos, pasas de uva y cáscaras de naranja",
-      "price": 2100
+      "price": 4300
     },
     {
       "name": "Blend Té - Paris",
       "type": "Infusiones",
       "detail": "Té negro, cascarillas y chips de chocolate",
-      "price": 2100
+      "price": 4300
     },
     {
       "name": "Blend Té - Praga",
       "type": "Infusiones",
       "detail": "Té verde, té rojo, estrellas de anis, naranja, lemons grass y vainilla",
-      "price": 2100
+      "price": 4300
     },
     {
       "name": "Blend Té - Maya",
       "type": "Infusiones",
       "detail": "Té negro, Hibiscus, menta, cardamomo y vainilla",
-      "price": 2100
+      "price": 4300
     },
     {
       "name": "Chai Latte",
       "type": "Infusiones",
-      "price": 2100
+      "price": 4800
     },
     {
       "name": "Agua Mineral",
       "type": "Bebidas",
-      "price": 1050
+      "price": 2400
     },
     {
       "name": "Agua Saborizada (500 ml)",
       "type": "Bebidas",
-      "price": 1050
+      "price": 3000
     },
     {
       "name": "Agua Saborizada (1,5 lt)",
@@ -89,7 +89,7 @@
     {
       "name": "Gaseosa (500 ml)",
       "type": "Bebidas",
-      "price": 1550
+      "price": 3300
     },
     {
       "name": "Gaseosa (1,5 lt)",
@@ -104,86 +104,86 @@
     {
       "name": "Submarino",
       "type": "Batidos",
-      "price": 2350
+      "price": 5000
     },
     {
       "name": "Chocolatada",
       "type": "Batidos",
-      "price": 1550
+      "price": 3150
     },
     {
       "name": "Limonada / Naranjada",
       "type": "Batidos",
-      "price": 2400
+      "price": 4900
     },
     {
       "name": "Botella de Limonada / Naranjada",
       "type": "Batidos",
-      "price": 4350
+      "price": 9000
     },
     {
       "name": "Licuado",
       "type": "Batidos",
       "detail": "Banana / Frutos Rojos / Durazno / Multifruta",
-      "price": 2550
+      "price": 5700
     },
     {
       "name": "Batido (c/ granola y avena)",
       "type": "Batidos",
-      "price": 3150
+      "price": 6400
     },
     {
       "name": "Exprimido de naranja",
       "type": "Batidos",
-      "price": 2350
+      "price": 4800
     },
     {
       "name": "Iced Latte",
       "type": "Batidos",
-      "price": 1800
+      "price": 3950
     },
     {
       "name": "Milkshake",
       "type": "Batidos",
       "detail": "Chocolate / Dulche de Leche / Frutilla / Vainilla / Oreo",
-      "price": 2400
+      "price": 6000
     },
     {
       "name": "Frappuccino",
       "type": "Batidos",
       "detail": "Chocolate / Dulce de leche / Vainilla",
-      "price": 2700
+      "price": 6500
     },
     {
       "name": "Crumble de Manzana",
       "type": "Pasteleria",
-      "price": 3750
+      "price": 8100
     },
     {
       "name": "Torta Brownie",
       "type": "Pasteleria",
-      "price": 4050
+      "price": 8100
     },
     {
       "name": "Cheesecake",
       "type": "Pasteleria",
       "detail": "Frutos Rojos / Maracuya / Pistacho",
-      "price": 4050
+      "price": 8100
     },
     {
       "name": "Copa oreo",
       "type": "Pasteleria",
-      "price": 4050
+      "price": 8100
     },
     {
       "name": "Chocotorta",
       "type": "Pasteleria",
-      "price": 3750
+      "price": 7200
     },
     {
       "name": "Lemon Pie",
       "type": "Pasteleria",
-      "price": 4050
+      "price": 8100
     },
     {
       "name": "Pasta Frola de Membrillo",
@@ -193,55 +193,55 @@
     {
       "name": "Carrot Cake",
       "type": "Pasteleria",
-      "price": 4050
+      "price": 8100
     },
     {
       "name": "Torta Matilda",
       "type": "Pasteleria",
-      "price": 4350
+      "price": 8400
     },
     {
       "name": "Porcion de Budin",
       "type": "Pasteleria",
-      "price": 1750
+      "price": 3600
     },
     {
       "name": "Roll de manzana y canela",
       "type": "Pasteleria",
-      "price": 2550
+      "price": 5200
     },
     {
       "name": "Alfajor de Chocolate",
       "type": "Pasteleria",
-      "price": 1950
+      "price": 4800
     },
     {
       "name": "Alfajor de Pistacho",
       "type": "Pasteleria",
-      "price": 2350
+      "price": 5200
     },
     {
       "name": "Alfajor de Maicena",
       "type": "Pasteleria",
-      "price": 1650
+      "price": 3350
     },
     {
       "name": "Cookies",
       "type": "Pasteleria",
       "detail": "c/ chips de chocolate o pasas de uva",
-      "price": 950
+      "price": 3800
     },
     {
       "name": "Tostado (Ciabatta o Arabe)",
       "type": "Tostados",
       "detail": "Jamon y queso / Queso y tomate",
-      "price": 4050
+      "price": 8600
     },
     {
       "name": "Caprese",
       "type": "Tostados",
       "detail": "Queso, tomate, aceitunas y albahaca",
-      "price": 4650
+      "price": 10000
     }
   ]
 }
