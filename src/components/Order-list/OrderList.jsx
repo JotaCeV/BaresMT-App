@@ -36,7 +36,7 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
 
   const handleSearchedProducts = (value) => {
     if (value === "") {
-      return setOrderSearch([]);
+      return setOrderSearch(products);
     }
     const filteredOrderSearch = products.filter((product) =>
       product.name.toLowerCase().includes(value.toLowerCase())
@@ -45,13 +45,28 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
   };
 
   const handleAddProduct = (productName, productPrice) => {
-    const newProduct = { name: productName, price: productPrice };
-    setOrderProducts([...orderProducts, newProduct]);
+    const existingProduct = orderProducts.find((e)=> e.name === productName)
+    if(existingProduct){
+      const updatedProducts = orderProducts.map((e)=> {
+        if(e.name === productName){
+          return {
+            ...e,
+            quantity: e.quantity + 1
+          }
+        }
+        return e
+      })
+
+      setOrderProducts(updatedProducts)
+    } else {
+      const newProduct = { name: productName, price: productPrice, quantity: 1 };
+      setOrderProducts([...orderProducts, newProduct]);
+    }
   };
 
   const handleDeleteProduct = (prodIndex) => {
     const filteredProducts = orderProducts.filter(
-      (e, index) => index !== prodIndex
+      (_, index) => index !== prodIndex
     );
 
     setOrderProducts(filteredProducts);
@@ -59,7 +74,7 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
 
   const calculateTotal = () => {
     let total = 0;
-    orderProducts.forEach((e) => (total += e.price));
+    orderProducts.forEach(({price, quantity}) => (total += (price * quantity)));
 
     return total;
   };
@@ -182,10 +197,11 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
               <TableContainer h="55vh" overflowY="auto">
                 <Table variant="striped">
                   <Tbody>
-                    {orderProducts?.map(({ name, price }, index) => (
+                    {orderProducts?.map(({ name, price, quantity }, index) => (
                       <Tr key={index}>
                         <Td>{name}</Td>
                         <Td>{price}</Td>
+                        <Td>{quantity}</Td>
                         <Td>
                           <IconButton
                             icon={<PiTrashBold />}

@@ -13,8 +13,8 @@ function OrderCards({ order, buttonFunc, deletingState }) {
   return (
     <GridItem border="2px solid black" borderRadius="0.4rem">
       <UnorderedList h="20vh" p="0.5rem 0 0.5rem 2rem" overflowY="auto">
-        {order.products?.map((e, i) => (
-          <ListItem key={i}>{e.name}</ListItem>
+        {order.products?.map(({name, quantity}, i) => (
+          <ListItem key={i}>{`${name} x${quantity}`}</ListItem>
         ))}
       </UnorderedList>
       <Flex
@@ -22,11 +22,11 @@ function OrderCards({ order, buttonFunc, deletingState }) {
         alignItems="center"
         mt="1rem"
         p="0.5rem"
-        bg="#dfe6e9"
+        bg="#2ecc71"
         fontSize="1.5rem"
         borderBottomRadius="0.2rem"
       >
-        <Text color="#2ecc71" as="b" w="100%" textAlign="center">
+        <Text color="#fff" as="b" w="100%" textAlign="center">
           ${order.total}
         </Text>
         <Button
