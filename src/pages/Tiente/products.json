@@ -82,24 +82,9 @@
       "price": 3000
     },
     {
-      "name": "Agua Saborizada (1,5 lt)",
-      "type": "Bebidas",
-      "price": 1500
-    },
-    {
       "name": "Gaseosa (500 ml)",
       "type": "Bebidas",
       "price": 3300
-    },
-    {
-      "name": "Gaseosa (1,5 lt)",
-      "type": "Bebidas",
-      "price": 3350
-    },
-    {
-      "name": "Gatorade (500 ml)",
-      "type": "Bebidas",
-      "price": 1290
     },
     {
       "name": "Submarino",
@@ -160,6 +145,16 @@
       "price": 8100
     },
     {
+      "name": "Tarta Patagonia",
+      "type": "Pasteleria",
+      "price": 8100
+    },
+    {
+      "name": "Tarta Frutilla",
+      "type": "Pasteleria",
+      "price": 7500
+    },
+    {
       "name": "Torta Brownie",
       "type": "Pasteleria",
       "price": 8100
@@ -184,11 +179,6 @@
       "name": "Lemon Pie",
       "type": "Pasteleria",
       "price": 8100
-    },
-    {
-      "name": "Pasta Frola de Membrillo",
-      "type": "Pasteleria",
-      "price": 1350
     },
     {
       "name": "Carrot Cake",
@@ -226,6 +216,16 @@
       "price": 3350
     },
     {
+      "name": "Alfajor de Nuez",
+      "type": "Pasteleria",
+      "price": 4400
+    },
+    {
+      "name": "Alfajor de Almendra",
+      "type": "Pasteleria",
+      "price": 4400
+    },
+    {
       "name": "Cookies",
       "type": "Pasteleria",
       "detail": "c/ chips de chocolate o pasas de uva",
@@ -242,6 +242,69 @@
       "type": "Tostados",
       "detail": "Queso, tomate, aceitunas y albahaca",
       "price": 10000
-    }
+    },
+    {
+      "name": "Tostadas",
+      "type": "Varios",
+      "detail": "3 Unidades",
+      "price": 5500
+    },
+    {
+      "name": "Tostadas c/ Huevo revuelto",
+      "type": "Varios",
+      "price": 6400
+    },
+    {
+      "name": "Omelette",
+      "type": "Varios",
+      "price": 6700
+    },
+    {
+      "name": "Tostado de Chipa",
+      "type": "Varios",
+      "price": 10200
+    },
+    {
+      "name": "Huevos Revueltos",
+      "type": "Varios",
+      "price": 4300
+    },
+    {
+      "name": "Scon parmesano",
+      "type": "Varios",
+      "price": 4200
+    },
+    {
+      "name": "Medialunas",
+      "type": "Varios",
+      "price": 2300
+    },
+    {
+      "name": "Medialunas c/ Jamons y queso",
+      "type": "Varios",
+      "price": 4400
+    },
+    {
+      "name": "Chipa",
+      "type": "Varios",
+      "price": 1800
+    },
+    {
+      "name": "Crepe XL",
+      "type": "Varios",
+      "price": 8750
+    },
+     {
+      "name": "Hotcakes",
+      "type": "Varios",
+      "detail": "3 Unidades",
+      "price": 8900
+    },
+    {
+      "name": "Waffles",
+      "type": "Varios",
+      "detail": "2 Unidades",
+      "price": 8900
+    },
   ]
 }
