@@ -37,7 +37,7 @@ function NavBar({ theme, barQuery }) {
       >
         {isOpen ? <IoMdClose /> : <IoIosArrowForward />}
       </Button>
-      <Center
+      {isOpen ? <Center
         bg="#fff"
         w={isOpen ? "210px" : "0px"}
         h="210px"
@@ -46,7 +46,7 @@ function NavBar({ theme, barQuery }) {
         onClick={() => navigate(`/${barQuery}`)}
       >
         <Heading>Imagen</Heading>
-      </Center>
+      </Center>: <></>}
       <Stack w="100%" direction="column" alignItems="center" spacing={4}>
         <Button
           w="90%"
