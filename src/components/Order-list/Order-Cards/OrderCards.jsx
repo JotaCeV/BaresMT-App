@@ -7,11 +7,10 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import { PiTrash } from "react-icons/pi";
-import React from "react";
 
-function OrderCards({ order, buttonFunc, deletingState }) {
+function OrderCards({ order, buttonFunc, deletingState, orderNum}) {
   return (
-    <GridItem border="2px solid black" borderRadius="0.4rem">
+    <GridItem border="2px solid black" borderRadius="0.3rem">
       <UnorderedList h="20vh" p="0.5rem 0 0.5rem 2rem" overflowY="auto">
         {order.products?.map(({name, quantity}, i) => (
           <ListItem key={i}>{`${name} x${quantity}`}</ListItem>
