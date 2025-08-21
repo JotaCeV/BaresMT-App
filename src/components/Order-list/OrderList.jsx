@@ -19,6 +19,7 @@ import {
   TableContainer,
   Tbody,
   Td,
+  Thead,
   Tr,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -138,11 +139,11 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        size="6xl"
+        // size="6xl"
         closeOnOverlayClick={false}
       >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW="80vw">
           <ModalHeader
             textAlign="center"
             fontSize="30px"
@@ -191,17 +192,24 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
               )}
             </Box>
 
-            <Divider orientation="vertical" />
-
             <Box w="45%">
               <TableContainer h="55vh" overflowY="auto">
                 <Table variant="striped">
+                  <Thead>
+                    <Tr>
+                      <Td>Nombre</Td>
+                      <Td>Precio c/u</Td>
+                      <Td>Cantidad</Td>
+                      <Td>Total</Td>
+                    </Tr>
+                  </Thead>
                   <Tbody>
                     {orderProducts?.map(({ name, price, quantity }, index) => (
                       <Tr key={index}>
                         <Td>{name}</Td>
                         <Td>{price}</Td>
                         <Td>{quantity}</Td>
+                        <Td>{price * quantity}</Td>
                         <Td>
                           <IconButton
                             icon={<PiTrashBold />}
