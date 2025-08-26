@@ -1,14 +1,13 @@
 import { Button, Center, Flex, Heading, Spacer, Stack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoIosArrowForward, IoMdClose } from "react-icons/io";
 import {
   PiBookOpenText,
   PiClipboardText,
-  PiArrowsClockwise,
 } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
-function NavBar({ theme, barQuery }) {
+function NavBar({ theme }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -43,7 +42,7 @@ function NavBar({ theme, barQuery }) {
         h="210px"
         transition="opacity 0.3s ease-in, width 0.3s ease-in"
         opacity={isOpen ? 1 : 0}
-        onClick={() => navigate(`/${barQuery}`)}
+        onClick={() => navigate(`/`)}
       >
         <Heading>Imagen</Heading>
       </Center>: <></>}
@@ -57,7 +56,7 @@ function NavBar({ theme, barQuery }) {
           }}
           color={theme.color}
           leftIcon={<PiBookOpenText />}
-          onClick={() => navigate(`/${barQuery}?view=Catalogo`)}
+          onClick={() => navigate(`/?view=Catalogo`)}
         >
           {isOpen ? "Catalogo" : ""}
         </Button>
@@ -71,30 +70,12 @@ function NavBar({ theme, barQuery }) {
           }}
           color={theme.color}
           leftIcon={<PiClipboardText fontSize="30px" />}
-          onClick={() => navigate(`/${barQuery}?view=Pedidos`)}
+          onClick={() => navigate(`/?view=Pedidos`)}
         >
           {isOpen ? "Lista de Pedidos" : ""}
         </Button>
       </Stack>
       <Spacer />
-      {isOpen ? (
-        <Button
-          w="95%"
-          h="50px"
-          color={theme.color}
-          bg="transparent"
-          fontSize="30px"
-          _hover={{
-            bg: theme.bg_dark,
-          }}
-          leftIcon={<PiArrowsClockwise />}
-          onClick={() => navigate("/")}
-        >
-          CAMBIAR BAR
-        </Button>
-      ) : (
-        <></>
-      )}
     </Flex>
   );
 }

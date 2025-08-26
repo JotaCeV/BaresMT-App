@@ -6,12 +6,12 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import NavBar from "../../components/Nav-Bar/NavBar";
+import { useEffect, useState } from "react";
+import NavBar from "./components/Nav-Bar/NavBar";
 import { useSearchParams } from "react-router-dom";
-import ProductsPage from "../../components/Products-Page/ProductsPage";
-import productsJSON from "./products.json";
-import OrderList from "../../components/Order-list/OrderList";
+import ProductsPage from "./components/Products-Page/ProductsPage";
+import productsJSON from "./utils/products.json";
+import OrderList from "./components/Order-list/OrderList";
 
 function TientePage() {
   const TienteTheme = {
@@ -69,7 +69,7 @@ function TientePage() {
 
   return (
     <Flex>
-      <NavBar theme={TienteTheme} barQuery="Tiente" />
+      <NavBar theme={TienteTheme}/>
 
       {switchComponents(pageView)}
     </Flex>

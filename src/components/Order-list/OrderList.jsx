@@ -4,7 +4,6 @@ import {
   Divider,
   Flex,
   Grid,
-  GridItem,
   Heading,
   IconButton,
   Input,
@@ -139,7 +138,7 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
       <Modal
         isOpen={isOpen}
         onClose={onClose}
-        // size="6xl"
+        size="6xl"
         closeOnOverlayClick={false}
       >
         <ModalOverlay />
