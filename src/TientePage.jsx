@@ -1,5 +1,6 @@
 import {
   AbsoluteCenter,
+  Box,
   Flex,
   Heading,
   ListItem,
@@ -12,6 +13,7 @@ import { useSearchParams } from "react-router-dom";
 import ProductsPage from "./components/Products-Page/ProductsPage";
 import productsJSON from "./utils/products.json";
 import OrderList from "./components/Order-list/OrderList";
+import lobbyImg from "./assets/tiente_outdoor.jpg"
 
 function TientePage() {
   const TienteTheme = {
@@ -49,20 +51,22 @@ function TientePage() {
 
       default:
         return (
-          <AbsoluteCenter>
-            <Heading as="h1" fontSize="50px" textTransform="uppercase">
-              Tiente Bar
-            </Heading>
-            <Heading as="h2" fontSize="30px" textAlign="center">
-              Horarios
-            </Heading>
-            <UnorderedList mt="1rem">
-              <Text fontSize="20px" as="i">
-                Lunes a Domingos
-              </Text>
-              <ListItem>9:00 - 13:00 / 16:00 - 20:00</ListItem>
-            </UnorderedList>
-          </AbsoluteCenter>
+          <Box backgroundImage={`url(${lobbyImg})`} backgroundPosition="top" backgroundSize="cover" backgroundRepeat="no-repeat" w="100%" h="100vh">
+            <Box h="40vh" w="60%" bg="rgba(255,255,255,0.9)" boxShadow="0px 0px 10px rgb(236, 236, 236)" backdropFilter="blur(8px)" mt="55vh" mx="auto" borderRadius="10px"  display="flex" flexDirection="column" alignItems="center" py="20px">
+              <Heading as="h1" fontSize="50px" textTransform="uppercase">
+                Tiente Bar
+              </Heading>
+              <Heading as="h2" fontSize="30px">
+                Horarios
+              </Heading>
+              <UnorderedList mt="1rem">
+                <Text fontSize="20px" as="i">
+                  Lunes a Domingos
+                </Text>
+                <ListItem>9:00 - 13:00 / 16:00 - 20:00</ListItem>
+              </UnorderedList>
+            </Box>
+          </Box>
         );
     }
   };
