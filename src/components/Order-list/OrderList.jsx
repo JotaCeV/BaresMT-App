@@ -23,7 +23,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { PiPlusBold, PiMinusBold, PiTrashBold } from "react-icons/pi";
-import React, { useState } from "react";
+import { useState } from "react";
 import OrderCards from "./Order-Cards/OrderCards";
 
 function OrderList({ products, theme, barOrders, barOrdersFunc }) {
@@ -117,7 +117,7 @@ function OrderList({ products, theme, barOrders, barOrdersFunc }) {
         <Button
           colorScheme="red"
           size="lg"
-          variant="outline"
+          variant={deletingOrders ? "solid" : "outline"}
           onClick={() => setDeletingOrders(!deletingOrders)}
         >
           Eliminar pedido
